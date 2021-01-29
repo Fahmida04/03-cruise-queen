@@ -71,7 +71,7 @@
                     <input id="economy-ticket-number" class="inp-style inp-width" type="text" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <button onclick="handleTicketLevel('economy', true)">+</button onclick="handleTicketLevel('economy', false)"> <button>-</button> </p>
+                    <p> <button onclick="handleTicketLevel('economy', true)">+</button> <button onclick="handleTicketLevel('economy', false)">-</button> </p>
                 </div>
             </div>
             <div class="calculations">
@@ -89,7 +89,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="vat">$0</p>
                     </div>
                 </div>
                 <hr>
@@ -98,7 +98,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p id="total-price-including-vat">$0</p>
                     </div>
                 </div>
             </div>
@@ -136,13 +136,18 @@
 
         const totalTicketPrice = fClassTicketNumber * 150 + economyTicketNumber * 100;
         document.getElementById('total-ticket-price').innerText = '$' + totalTicketPrice;
+
+        const vat = totalTicketPrice * 0.1;
+        document.getElementById('vat').innerText = '$' + vat;
+
+        const totalPriceIncludingVat = totalTicketPrice + vat;
+        document.getElementById('total-price-including-vat').innerText = '$' + totalPriceIncludingVat;
        }
         function getInputValue(ticket){
             const  ticketInput = document.getElementById(ticket + '-ticket-number');
             const ticketNumber = parseInt(ticketInput.value);
             return ticketNumber;
         }
-       
     </script>
     <!--Thank You-->
 </body>
