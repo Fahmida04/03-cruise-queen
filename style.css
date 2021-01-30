@@ -57,7 +57,7 @@ nav ul li a:hover, a.active{
     font-weight: 500;
 }
 .booking-form{
-    background-color: #fff;
+    background-color: white;
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
@@ -137,5 +137,6 @@ nav ul li a:hover, a.active{
 .success{ 
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    color: white;
+    background-color: rgb(240, 244, 255);
+    height: 800px;
 }
