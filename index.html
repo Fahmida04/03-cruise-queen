@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <!--Header and Menu Section-->
+    <div id="booking-part" class="first-page">
+        <!--Header and Menu Section-->
     <header class="container">
         <nav>
             <ul>
@@ -27,87 +28,94 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
-
-        <div class="booking-content">
-            <h1>Cruise Queen</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
-        </div>
-
-
-        <div class="booking-form">
-            <h3>Book Ocean Time</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+    <main  class="main-content container">
+            <div class="booking-content">
+                <h1>Cruise Queen</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
             </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
+    
+    
+            <div class="booking-form">
+                <h3>Book Ocean Time</h3>
                 <div class="input-group">
-                    <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <label for="">Flying From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
                 </div>
                 <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <label for="">Flying To</label>
+                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
                 </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                </div>
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">First Class ($150)</label>
+                        <input id="f-class-ticket-number" class="inp-style inp-width" type="text" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="handleTicketLevel('f-class', true)" class="up-down-btn">+</button> <button onclick="handleTicketLevel('f-class', false)" class="up-down-btn">-</button>
+                    </div>
+                </div>
+                
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ($100)</label>
+                        <input id="economy-ticket-number" class="inp-style inp-width" type="text" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <p> <button onclick="handleTicketLevel('economy', true)" class="up-down-btn">+</button> <button onclick="handleTicketLevel('economy', false)" class="up-down-btn">-</button> </p>
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p id="total-ticket-price">$0</p>
+                        </div>
+                    </div>
+    
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p id="vat">$0</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p id="total-price-including-vat">$0</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="booking" class="btn-style">Book Now</button>
             </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($150)</label>
-                    <input id="f-class-ticket-number" class="inp-style inp-width" type="text" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <button onclick="handleTicketLevel('f-class', true)">+</button> <button onclick="handleTicketLevel('f-class', false)">-</button>
-                </div>
-            </div>
-            
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($100)</label>
-                    <input id="economy-ticket-number" class="inp-style inp-width" type="text" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <p> <button onclick="handleTicketLevel('economy', true)">+</button> <button onclick="handleTicketLevel('economy', false)">-</button> </p>
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="right">
-                        <p id="total-ticket-price">$0</p>
-                    </div>
-                </div>
-
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p id="vat">$0</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p id="total-price-including-vat">$0</p>
-                    </div>
-                </div>
-            </div>
-            <button class="btn-style">Book Now</button>
-        </div>
     </main>
+</div>
+    
+    <div id="success-area" class="success">
+        <h1>Your Booking Was Successful!</h1>
+        <h3>Thanks for purchasing from us. Hope you will love your journey! </h3>
+    </div>
+    
+    <!--Javascript Section -->
 
-    <!--Javascript Section-->
     <script>
+
        //ticket increase-decrease button
        function handleTicketLevel(ticket, upward) {
         const ticketInput = document.getElementById(ticket + '-ticket-number');
@@ -148,8 +156,21 @@
             const ticketNumber = parseInt(ticketInput.value);
             return ticketNumber;
         }
+
+         //bonus part
+         const bookBtn = document.getElementById('booking');
+        bookBtn.addEventListener("click", function(){
+            const bookingPart = document.getElementById("booking-part");
+            bookingPart.style.display = "none";
+            const successArea = document.getElementById("success-area");
+            successArea.style.display = "block";
+            successArea.style.displayColor = "white";
+        });
+
     </script>
+
     <!--Thank You-->
+
 </body>
 
 </html>
